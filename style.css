@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: #ddd;
+}
+.container{
+    /* background: chartreuse; */
+    background: #fff;
+    box-shadow: 2px 2px 5px #999;
+    width: 300px;
+    height: 400px;
+}
+.container #operaciones{
+    background: cyan;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 1rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+.container ul{
+    /* background: chocolate; */
+    display: grid;
+    height: calc(400px - 65px);
+    margin: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    grid-template-rows: repeat(5, 1fr);
+
+}
+button{
+    background: #fff;
+    border: none;
+    box-shadow: 2px 2px 5px #999;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+button:active{
+    box-shadow: -2px -2px 4px #ddd;
+    background: #fff;
+}
+button:first-child{
+    background: #028876;
+    color: #fff;
+    grid-column: 1 /3;
+    grid-row: 1;
+}
+button:nth-child(4){
+    background: #028876;
+    color: #fff;
+    grid-row: 2 / 4;
+    grid-column: 4 / 5;
+}
+button:last-child{
+    background: #028876;
+    color: #fff;
+    grid-column: 3 / 5;
+    grid-row: 5 / 6;
+}
